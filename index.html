@@ -1,0 +1,61 @@
+<!doctype html>
+<html ng-app="groupApp">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="app/groupApp.js"></script>
+    </head>
+<body>
+
+
+    <h1>Group by Interval</h1>
+    <hr>
+
+    <div class="container" ng-controller="groupController as group" role="main">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+                
+
+                <form ng-submit="group.addNumber()">
+                    <div class="form-group">
+                        <label for="number">Number</label>
+                        <input type="number" class="form-control" id="number" placeholder="0" ng-model="group.number">
+                    </div> <!-- .form-group -->
+                    <button class="btn btn-default">Add number</button>
+                </form> <!-- group.addNumber -->
+
+                <form>
+                    <div class="form-group">
+                        <label for="range">Range</label>
+                        <input type="number" class="form-control" id="range" placeholder="10" ng-model="group.range">
+                    </div> <!-- .form-group -->
+                </form> <!-- group.setRange -->
+
+                <h2 class="set" ng-show="group.set.length !== 0">{{ group.set }}</h2>
+
+                <form ng-submit="group.group()">
+                    <button class="group btn btn-primary">Group</button>
+                </form>
+            </div> <!-- .panel-body -->
+        </div>
+
+        <div class="panel panel-success" ng-show="group.showResult">
+            <div class="panel-heading">
+                <h3 class="panel-title">Result</h3>
+            </div>
+            <div class="panel-body">
+                <h2>{{ group.result }}</h2>
+            </div> <!-- .panel-body -->
+        </div> <!-- panel panel-default -->
+
+    </div> <!-- .container -->
+
+</body>
+</html>
+

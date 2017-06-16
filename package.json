@@ -1,0 +1,23 @@
+{
+  "name": "click-bus-group-by-interval",
+  "version": "1.0.0",
+  "description": "Click bus test",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/driverInside/click-bus-group-by-interval.git"
+  },
+  "author": "Hiram E. Pérez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/driverInside/click-bus-group-by-interval/issues"
+  },
+  "homepage": "https://github.com/driverInside/click-bus-group-by-interval#readme",
+  "dependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}
